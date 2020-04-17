@@ -1,0 +1,6 @@
+
+# [2020-04-14] bind Ctrl+k to history search
+bind -m emacs-standard -x '"\C-k": __fzf_history__'
+
+# [2020-04-14] https://github.com/python-poetry/poetry/issues/1849
+export LC_ALL=C.UTF-8
