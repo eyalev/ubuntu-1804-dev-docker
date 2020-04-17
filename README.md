@@ -3,6 +3,12 @@
 
 Dev environment Docker image.
 
+# Run 
+
+```
+$ docker run -it --rm eyalev/ubuntu-1804-dev
+```
+
 # Some of the stack
 
 - Ubuntu 18.04
