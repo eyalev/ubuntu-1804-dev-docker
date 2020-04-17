@@ -15,6 +15,3 @@ $ docker run -it --rm eyalev/ubuntu-1804-dev
 - Python
   - Pip
 - fzf
-
-
-
