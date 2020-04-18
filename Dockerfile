@@ -53,3 +53,5 @@ RUN echo 'source ~/configs/bashrc_ext' >> ~/.bashrc
 # Setup shell-commnads
 ARG UPDATE_SHELL_HISTORY
 RUN curl -L https://github.com/eyalev/shell-history/raw/master/setup_bash_commands.sh | bash
+
+CMD ["tmux"]
