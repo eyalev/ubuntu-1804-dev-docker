@@ -31,7 +31,7 @@ RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 
 RUN pip install --upgrade pip==19.1
 
-RUN echo 'HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "' >> ~/.bashrc
+# RUN echo 'HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "' >> ~/.bashrc
 
 # Install fzf:  https://github.com/junegunn/fzf
 RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -46,9 +46,10 @@ ENV PROMPT_COMMAND 'history -a;history -n'
 
 WORKDIR /root
 
+# Setup configs
 COPY configs /root/configs
-
-# Source configs
 RUN echo 'source ~/configs/bashrc_ext' >> ~/.bashrc
 
-
+# Setup shell-commnads
+ARG UPDATE_SHELL_HISTORY
+RUN curl -L https://github.com/eyalev/shell-history/raw/master/setup_bash_commands.sh | bash
