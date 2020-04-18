@@ -33,7 +33,7 @@ RUN pip install --upgrade pip==19.1
 
 # RUN echo 'HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "' >> ~/.bashrc
 
-# Install fzf:  https://github.com/junegunn/fzf
+# Install fzf: https://github.com/junegunn/fzf
 RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 RUN ~/.fzf/install --all
 
